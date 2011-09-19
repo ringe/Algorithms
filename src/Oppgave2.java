@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Oppgave2 {
 	public static <E extends Comparable<E>> E max(E[] list)
 	{
