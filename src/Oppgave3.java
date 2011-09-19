@@ -13,16 +13,19 @@ public class Oppgave3 {
 		
 		for (int i = 1; i < list.length; i++)
 		{
-			if (list[i].compareTo(list[i-1]) == -1)
-				l=1;
-			else
+			if (list[i].compareTo(list[i-1]) == 0)
 				l++;
-			if(l>length)
-				length=l;
+			else {
+				l = 1;
+				p = i;
+			}
+			if(l>length) {
+				pos = p;
+				length = l;
+			}
 		}
 		
-		System.out.print(length);
-		//return list[pos];
+		System.out.println("" + length + " tilfeller av " + list[pos] + " i posisjon " + pos);
 	}
 	
 	
@@ -61,18 +64,5 @@ public class Oppgave3 {
 		}
 		
 		count(ints);
-//		
-//		
-//		while (!(numbers.equals("0"))){
-//			numbers = in.read();
-//			
-//			if (!(numbers.equals("0"))){
-//				String[] n = numbers.split("\\s+");
-//				Integer[] nn = new Integer[n.length];
-//				for (int i = 0; i < n.length; i++)
-//					nn[i] = Integer.parseInt(n[i]);
-//				count(nn);
-//			}
-//		}
 	}
 }

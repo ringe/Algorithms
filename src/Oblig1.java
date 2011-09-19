@@ -27,6 +27,7 @@ public class Oblig1 {
 		System.out.println("\nOppgave 2: And the highest number was: " +i);
 		
 		// Oppgave 3
+		System.out.println("\nOppgave 3:");
 		Oppgave3.read();
 	}
 }
