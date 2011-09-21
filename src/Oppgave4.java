@@ -1,37 +1,43 @@
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-
 
 public class Oppgave4 {
 	public Oppgave4() throws IOException {
 		
-		System.out.println("Type one number at a time, end with 0 (null): ");
+		System.out.println("Type a short text: ");
 		Scanner keyboard = new Scanner(System.in);
 
-		String a = keyboard.nextLine();
-		System.out.println(a);
+		String input = keyboard.nextLine();
+		String reverse = reverse(input);
 		
-//		boolean done=false;
-//		do {
-//			try {
-//				int i = keyboard.nextInt();
-//				if (i==0)
-//					done = true;
-//				else
-//					numbers.add(i);
-//			} catch(Exception e) {
-//				System.out.println("Only numbers, please.");
-//				done=true;
-//			}
-//		} while(!done);
+		System.out.println(input + ":" + reverse);
+		System.out.println("The given string is " + (checkPalindrome(input, reverse) ? "a " : "not a " ) + "palindrome.");
 		
 	}
 	
-//	public static String reverse(String value, String rev) 
-//	{
-//		
-//	}
+	public static boolean checkPalindrome(String value, String reverse)
+	{
+		char[] val = value.toCharArray();
+		char[] rev = reverse.toCharArray();
+		boolean res = true; 
+		
+		for (int i = 0; i < val.length; i++)
+			if (val[i] != rev[i])
+				res = false;
+
+		return res;
+	}
+	
+	public static String reverse(String value) 
+	{
+		String rev = "";
+		char[] inp = value.toCharArray();
+		int i;
+		
+		for (i = inp.length - 1; i >= 0; i--)
+			rev += inp[i];
+		
+		return rev;
+	}
 
 }
