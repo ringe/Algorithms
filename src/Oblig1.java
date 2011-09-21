@@ -17,17 +17,16 @@ public class Oblig1 {
 		int[] out = oppg1.permute();
 		oppg1.print("Oppgave b) After permutation:");
 		
-		// Convert the array to object array
-		Integer[] ints = new Integer[out.length];
-		for (int i = 0; i < out.length; i++)
-			ints[i] = out[i];
-		
 		// Oppgave 2
-		Integer i = Oppgave2.max(ints);
+		Integer i = Oppgave2.maxInt(out);
 		System.out.println("\nOppgave 2: And the highest number was: " +i);
 		
 		// Oppgave 3
 		System.out.println("\nOppgave 3:");
-		Oppgave3.read();
+		new Oppgave3();
+		
+		// Oppgave 4
+		System.out.println("\nOppgave 4:");
+		new Oppgave4();
 	}
 }

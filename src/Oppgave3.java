@@ -6,34 +6,39 @@ import java.util.Scanner;
 public class Oppgave3 {
 	public static <E extends Comparable<E>> void count(E[] list)
 	{
-		int pos = 0;
-		int length = 0;
-		int l = 1;
-		int p = 0;
-		
-		for (int i = 1; i < list.length; i++)
+		if (list.length > 0)
 		{
-			if (list[i].compareTo(list[i-1]) == 0)
-				l++;
-			else {
-				l = 1;
-				p = i;
+			int pos = 0;
+			int length = 0;
+			int l = 1;
+			int p = 0;
+			
+			for (int i = 1; i < list.length; i++)
+			{
+				if (list[i].compareTo(list[i-1]) == 0)
+					l++;
+				else {
+					l = 1;
+					p = i;
+				}
+				if(l>length) {
+					pos = p;
+					length = l;
+				}
 			}
-			if(l>length) {
-				pos = p;
-				length = l;
-			}
+			
+			System.out.println("" + length + " occurences of the number " + list[pos] + " starting at Array position " + pos);
+		} else {
+			System.out.println("You have to type some numbers.");
 		}
-		
-		System.out.println("" + length + " tilfeller av " + list[pos] + " i posisjon " + pos);
 	}
 	
 	
-	public static void read() throws IOException{
+	public Oppgave3() throws IOException{
 
 		List<Integer> numbers = new ArrayList<Integer>();
 		
-		System.out.println("Skriv inn en sekvens med heltall, avslutt med 0 (null): ");
+		System.out.println("Type one number at a time, end with 0 (null): ");
 		Scanner keyboard = new Scanner(System.in);
 
 		boolean done=false;
@@ -45,12 +50,12 @@ public class Oppgave3 {
 				else
 					numbers.add(i);
 			} catch(Exception e) {
-				System.out.println("Bare tall, takk");
+				System.out.println("Only numbers, please.");
 				done=true;
 			}
 		} while(!done);
 		
-		System.out.print("Takk! ");
+		System.out.print("Thanks! ");
 		System.out.println(numbers.toString());
 		
 		
