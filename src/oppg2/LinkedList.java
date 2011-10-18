@@ -179,6 +179,22 @@ public class LinkedList<AnyType>
 
         return new LinkedListIterator<AnyType>( itr );
     }
+    
+    public void removeSubList(LinkedListIterator<AnyType> a, LinkedListIterator<AnyType> b){
+    	
+    	    	
+        LinkedListIterator<AnyType> p = findPrevious( a.retrieve() );
+        b.advance();
+        p.current.next = b.current;
+            	
+    } 
+    
+    public LinkedListIterator<AnyType> retreat(LinkedListIterator<AnyType> a){
+    	
+    	LinkedListIterator<AnyType> p = findPrevious(a.retrieve() );
+    	return p;
+    	
+    }
 
     public static void main( String [ ] args )
     {
@@ -207,8 +223,19 @@ public class LinkedList<AnyType>
         System.out.println( "Finished deletions" );
         printList( theList );
         
-        System.out.println("Last element in list:");
+        System.out.println("Oppg2: Last element in list:");
         
         System.out.println(theList.last().retrieve());
+              
+        LinkedListIterator<Integer> her = theList.find(3);
+        LinkedListIterator<Integer> dit = theList.find(7);
+        
+        System.out.println("Oppg4: The element in front of " + her.retrieve() +" :");
+        LinkedListIterator<Integer> mit = theList.retreat(her);
+        System.out.println(mit.retrieve());
+        
+        System.out.println("Oppg3: Remove items from " + her.retrieve() +" to " + dit.retrieve() + " :");
+        theList.removeSubList(her, dit);
+        printList( theList );
     }
 }
