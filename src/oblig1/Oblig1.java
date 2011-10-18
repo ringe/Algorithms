@@ -1,3 +1,4 @@
+package oblig1;
 public class Oblig1 {
 	static Oppgave1 oppg1;
 	

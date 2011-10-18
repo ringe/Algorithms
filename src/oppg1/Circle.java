@@ -1,4 +1,4 @@
-package oblig2;
+package oppg1;
 
 /**
  * 
@@ -24,5 +24,9 @@ public class Circle {
 	
 	public double getArea() {
 		return Math.PI * Math.pow(radius, 2);
+	}
+	
+	public String toString() {
+		return color + " (" + radius + ")";
 	}
 }

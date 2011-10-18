@@ -1,4 +1,4 @@
-package oblig2;
+package oppg1;
 
 
 /**
@@ -175,7 +175,7 @@ public final class Sort
      * @param index1 the index of the first object.
      * @param index2 the index of the second object.
      */
-    public static final <AnyType> void swapReferences( AnyType [ ] a, int index1, int index2 )
+    public static final <AnyType> void swapReferences( AnyType[] a, int index1, int index2 )
     {
         AnyType tmp = a[ index1 ];
         a[ index1 ] = a[ index2 ];

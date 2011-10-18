@@ -1,4 +1,4 @@
-package oblig2;
+package oppg1;
 import java.util.*;
 
 public class CircleColorComparator implements Comparator<Circle> {

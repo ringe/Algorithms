@@ -1,3 +1,4 @@
+package oblig1;
 import java.util.Random;
 
 public class Oppgave1
