@@ -8,7 +8,5 @@ public class CircleColorComparator implements Comparator<Circle> {
 		String c1c = ((Circle) c1).getColor();
 		String c2c = ((Circle) c2).getColor();
 		return c1c.compareTo(c2c);
-	}
-
-	
+	}	
 }
