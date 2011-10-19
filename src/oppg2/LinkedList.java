@@ -28,16 +28,6 @@ package oppg2;
  * @author Mark Allen Weiss
  * @see LinkedListIterator
  */
-/**
- * @author runar
- *
- * @param <AnyType>
- */
-/**
- * @author runar
- *
- * @param <AnyType>
- */
 public class LinkedList<AnyType>
 {
     /**
@@ -181,19 +171,14 @@ public class LinkedList<AnyType>
     }
     
     public void removeSubList(LinkedListIterator<AnyType> a, LinkedListIterator<AnyType> b){
-    	
-    	    	
         LinkedListIterator<AnyType> p = findPrevious( a.retrieve() );
         b.advance();
         p.current.next = b.current;
-            	
     } 
     
     public LinkedListIterator<AnyType> retreat(LinkedListIterator<AnyType> a){
-    	
     	LinkedListIterator<AnyType> p = findPrevious(a.retrieve() );
     	return p;
-    	
     }
 
     public static void main( String [ ] args )
@@ -224,11 +209,10 @@ public class LinkedList<AnyType>
         printList( theList );
         
         System.out.println("Oppg2: Last element in list:");
-        
         System.out.println(theList.last().retrieve());
               
         LinkedListIterator<Integer> her = theList.find(3);
-        LinkedListIterator<Integer> dit = theList.find(7);
+        LinkedListIterator<Integer> dit = theList.find(9);
         
         System.out.println("Oppg4: The element in front of " + her.retrieve() +" :");
         LinkedListIterator<Integer> mit = theList.retreat(her);

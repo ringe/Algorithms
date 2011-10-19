@@ -100,7 +100,8 @@ public final class Sort
      * Mergesort algorithm.
      * @param a an array of Comparable items.
      */
-    public static <AnyType extends Comparable<? super AnyType>> void mergeSort( AnyType [ ] a )
+    @SuppressWarnings("unchecked")
+	public static <AnyType extends Comparable<? super AnyType>> void mergeSort( AnyType [ ] a )
     {
         AnyType [ ] tmpArray = (AnyType []) new Comparable[ a.length ];
         mergeSort( a, tmpArray, 0, a.length - 1 );

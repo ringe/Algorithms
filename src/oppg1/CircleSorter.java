@@ -30,7 +30,7 @@ public class CircleSorter {
 	private static final int CUTOFF = 10;
 	
 	@SuppressWarnings("unchecked")
-	public static void quicksort(Object[] list, Comparator comparator) {
+	public static void quicksort(Object[] list, @SuppressWarnings("rawtypes") Comparator comparator) {
 		quickSort(list, 0, list.length - 1, comparator);
 	}
 	
